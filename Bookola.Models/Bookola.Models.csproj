@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,12 +46,12 @@
     <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookEdit.cs" />
     <Compile Include="Book\BookListItem.cs" />
+    <Compile Include="Genre\GenreCreate.cs" />
+    <Compile Include="Genre\GenreDetail.cs" />
+    <Compile Include="Genre\GenreEdit.cs" />
+    <Compile Include="Genre\GenreListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Genre\" />
-    <Folder Include="GraphicNovel\" />
-    <Folder Include="Magazine\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

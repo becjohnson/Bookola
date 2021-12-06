@@ -10,23 +10,26 @@ namespace Bookola.Data
 {
     public class Book
     {
-        [Key]
         public int Id { get; set; }
         [Required]
         public Guid UserId { get; set; }
-        [Required]
+        [Key]
         public string Title { get; set; }
         [Required]
-        public string Author { get; set; }
-        [Required]
+        public string FullName { get; set; }
+        [ForeignKey("FullName")]
+        [Display(Name = "Author")]
+        public Author Author { get; set; }
+        [Display(Name = "ISBN")]
         public long Isbn { get; set; }
-        [Required]
+        [Display(Name = "Country Code")]
         public int CountryCode { get; set; }
-        [Required]
+        [Display(Name = "Reading Level")]
         public int ReadingLevel { get; set; }
         [Required]
-        public int GenreId { get; set; }
-        [ForeignKey("GenreId")]
+        public string GenreName { get; set; }
+        [ForeignKey("GenreName")]
+        [Display(Name = "Genre")]
         public Genre Genre { get; set; }
     }
 }

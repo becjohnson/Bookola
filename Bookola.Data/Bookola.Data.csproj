@@ -54,9 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,5 @@
+C:\Users\beaut\Documents\Bookola\Bookola.Models\bin\Debug\Bookola.Models.dll
+C:\Users\beaut\Documents\Bookola\Bookola.Models\bin\Debug\Bookola.Models.pdb
+C:\Users\beaut\Documents\Bookola\Bookola.Models\obj\Debug\Bookola.Models.csproj.CoreCompileInputs.cache
+C:\Users\beaut\Documents\Bookola\Bookola.Models\obj\Debug\Bookola.Models.dll
+C:\Users\beaut\Documents\Bookola\Bookola.Models\obj\Debug\Bookola.Models.pdb

@@ -6,11 +6,12 @@ namespace Bookola.Data
 {
     public class Genre
     {
-        public int GenreId { get; set; }
+        public int Id { get; set; }
+        [Required]
+        [Key]
+        public string GenreName { get; set; }
         [Required]
         public Guid UserId { get; set; }
         public virtual ICollection<Book> Books { get; set; }
-        [Required]
-        public string Name { get; set; }
     }
 }
