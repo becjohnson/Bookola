@@ -45,12 +45,12 @@
     <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookEdit.cs" />
     <Compile Include="Book\BookListItem.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelCreate.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelDetail.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelEdit.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Genre\" />
-    <Folder Include="GraphicNovel\" />
-    <Folder Include="Magazine\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
