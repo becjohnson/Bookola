@@ -1,2 +1,17 @@
 C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.AssemblyReference.cache
 C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\Bookola.Data.dll.config
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\Bookola.Data.dll
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\Bookola.Data.pdb
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\EntityFramework.dll
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\EntityFramework.xml
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.dll
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.pdb
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.Migrations.InitialMigration.resources
+C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.GenerateResource.cache

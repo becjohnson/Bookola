@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace Bookola.WebAPI.Controllers
 {
+    [Authorize]
     public class MagazineController : ApiController
     {
 
