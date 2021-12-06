@@ -54,6 +54,27 @@ namespace Bookola.Service
                 return query.ToArray();
             }
         }
+
+        public object GetMagazineById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Magazines
+                    .Where(e => e.Id == id && e.UserId == _userId)
+                    .Select(
+                        e =>
+                        new MagazineListItem
+                        {
+                            Id = e.Id,
+                            AuthorId = e.AuthorId,
+                            Title = e.Title
+                        });
+                return query.ToArray();
+            }
+        }
+
         public bool UpdateMagazines(MagazineEdit model)
         {
             using (var ctx = new ApplicationDbContext())

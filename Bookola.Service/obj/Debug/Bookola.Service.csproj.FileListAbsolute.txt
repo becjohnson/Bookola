@@ -1,1 +1,2 @@
+C:\ElevenFiftyProjects\Bookola\Bookola.Service\obj\Debug\Bookola.Service.csproj.AssemblyReference.cache
 C:\ElevenFiftyProjects\Bookola\Bookola.Service\obj\Debug\Bookola.Service.csproj.CoreCompileInputs.cache
