@@ -12,7 +12,9 @@ namespace Bookola.Data
     {
         [Key]
         public int Id { get; set; }
-        
+        [Required]
+        public string AuthorId { get; set; }
+
         [Required]
         public Guid UserId { get; set; }
         public int Countrycode { get; set; }

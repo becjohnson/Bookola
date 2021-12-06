@@ -326,6 +326,20 @@
       <DependentUpon>202112061424413_CreateDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bookola.Data\Bookola.Data.csproj">
+      <Project>{c222bfff-df25-4e3c-9657-a7d5b701f83a}</Project>
+      <Name>Bookola.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bookola.Models\Bookola.Models.csproj">
+      <Project>{b38431e5-6fba-4a71-859c-e86581ebc512}</Project>
+      <Name>Bookola.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bookola.Service\Bookola.Service.csproj">
+      <Project>{5c2b1dc0-97c2-4fb3-b741-cd47ca765906}</Project>
+      <Name>Bookola.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
