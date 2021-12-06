@@ -117,3 +117,6 @@ C:\Users\beaut\Documents\Bookola\Bookola.WebAPI\obj\Debug\Bookola.WebAPI.dll
 C:\Users\beaut\Documents\Bookola\Bookola.WebAPI\obj\Debug\Bookola.WebAPI.pdb
 C:\Users\beaut\Documents\Bookola\Bookola.WebAPI\obj\Debug\Bookola.WebAPI.Migrations.CreateDB.resources
 C:\Users\beaut\Documents\Bookola\Bookola.WebAPI\obj\Debug\Bookola.WebAPI.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\Bookola\Bookola.WebAPI\obj\Debug\Bookola.WebAPI.Migrations.CreateDB.resources
+C:\ElevenFiftyProjects\Bookola\Bookola.WebAPI\obj\Debug\Bookola.WebAPI.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\Bookola\Bookola.WebAPI\obj\Debug\Bookola.WebAPI.csproj.CoreCompileInputs.cache

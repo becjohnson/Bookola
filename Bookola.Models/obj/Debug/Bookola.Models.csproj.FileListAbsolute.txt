@@ -1,0 +1,1 @@
+C:\ElevenFiftyProjects\Bookola\Bookola.Models\obj\Debug\Bookola.Models.csproj.CoreCompileInputs.cache
