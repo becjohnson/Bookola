@@ -17,7 +17,9 @@ namespace Bookola.Models.Magazine
         [Required]
         public string Title { get; set; }
         [Required]
-        public string AuthorId { get; set; }
+        public string AuthorFirstName { get; set; }
+        [Required]
+        public string AuthorLastName { get; set; }
 
         [Required]
         public int Volume { get; set; }
