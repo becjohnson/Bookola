@@ -1,3 +1,0 @@
-C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.Migrations.InitialMigration.resources
-C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.GenerateResource.cache
-C:\ElevenFiftyProjects\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.CoreCompileInputs.cache
