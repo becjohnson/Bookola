@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Bookola.Service
 {
-    class GraphicNovelService
+    public class GraphicNovelService
     {
         private readonly Guid _userId;
 
@@ -24,7 +24,7 @@ namespace Bookola.Service
             {
                 UserId = _userId,
                 Title = Model.Title,
-                Author = Model.Author,
+                FullName = Model.FullName,
                 ReadingLevel = Model.ReadingLevel,
                 GenreId = Model.GenreId,
 
@@ -49,7 +49,7 @@ namespace Bookola.Service
                                 new GraphicNovelListItem
                                 {
                                     Id = e.Id,
-                                    Author = e.Author,
+                                    FullName = e.FullName,
                                     Title = e.Title,
                                 }
                         );
@@ -58,7 +58,7 @@ namespace Bookola.Service
             }
         }
 
-        public GraphicNovelDetail GetCById(int id)
+        public GraphicNovelDetail GetGraphicNovelById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

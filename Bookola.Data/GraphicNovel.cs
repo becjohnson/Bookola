@@ -12,12 +12,17 @@ namespace Bookola.Data
     {
         [Key]
         public int Id { get; set; }
+        public string FullName { get; set; }
+        [ForeignKey("FullName")]
+        public Author Author { get; set; }
+
+
+
         [Required]
         public string Title { get; set; }
         [Required]
         public Guid UserId { get; set; }
-        [Required]
-        public string Author { get; set; }
+
         [Required]
         public long Isbn { get; set; }
         [Required]
