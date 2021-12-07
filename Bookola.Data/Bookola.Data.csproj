@@ -54,8 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Genre.cs" />
+    <Compile Include="GraphicNovel.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Magazine.cs" />
     <Compile Include="Migrations\202112061934136_Initial Migration.cs" />

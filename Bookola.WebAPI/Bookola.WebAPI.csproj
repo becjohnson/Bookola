@@ -214,6 +214,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\GraphicNovelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MagazineController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -222,7 +223,6 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -324,6 +324,7 @@
       <Name>Bookola.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bookola.Models\Bookola.Models.csproj">
+      <Project>{B38431E5-6FBA-4A71-859C-E86581EBC512}</Project>
       <Project>{b38431e5-6fba-4a71-859c-e86581ebc512}</Project>
       <Name>Bookola.Models</Name>
     </ProjectReference>

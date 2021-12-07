@@ -8,5 +8,6 @@ namespace Bookola.Models.Book
 {
     public class BookCreate
     {
+
     }
 }

@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace Bookola.Models.Author
+namespace Bookola.Models
 {
     public class AuthorCreate
     {
@@ -18,6 +20,9 @@ namespace Bookola.Models.Author
         public string FirstName { get; set; }
         [Key]
         public string LastName { get; set; }
-        
+        [Display(Name = "First")]
+        public string FirstName { get; set; }
+        [Display(Name = "Last")]
+        public string LastName { get; set; }
     }
 }
