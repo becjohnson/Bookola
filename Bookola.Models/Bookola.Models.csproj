@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,12 +50,17 @@
     <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookEdit.cs" />
     <Compile Include="Book\BookListItem.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelCreate.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelDetail.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelEdit.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Genre\" />
-    <Folder Include="GraphicNovel\" />
-    <Folder Include="Magazine\" />
+    <ProjectReference Include="..\Bookola.Data\Bookola.Data.csproj">
+      <Project>{C222BFFF-DF25-4E3C-9657-A7D5B701F83A}</Project>
+      <Name>Bookola.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

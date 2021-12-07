@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Bookola.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
 
 namespace Bookola.WebAPI.Models
 {
@@ -30,6 +29,7 @@ namespace Bookola.WebAPI.Models
         }
         public DbSet<Book> Books { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<GraphicNovel>GraphicNovels {get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
