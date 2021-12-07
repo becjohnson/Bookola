@@ -20,6 +20,7 @@ namespace Bookola.Data
         public string FullName
         {
             get => LastName + ", " + FirstName;
+            set { }
         }
         public string FirstName { get; set; }
         [Key]
