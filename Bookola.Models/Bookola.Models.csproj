@@ -54,6 +54,10 @@
     <Compile Include="GraphicNovel\GraphicNovelDetail.cs" />
     <Compile Include="GraphicNovel\GraphicNovelEdit.cs" />
     <Compile Include="GraphicNovel\GraphicNovelListItem.cs" />
+    <Compile Include="Magazine\MagazineCreate.cs" />
+    <Compile Include="Magazine\MagazineDetail.cs" />
+    <Compile Include="Magazine\MagazineEdit.cs" />
+    <Compile Include="Magazine\MagazineListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
