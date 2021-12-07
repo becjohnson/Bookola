@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Bookola.Data
+namespace Bookola.Models
 {
-    public class Author
+    public class AuthorCreate
     {
         public int Id { get; set; }
         [Display(Name = "Author")]
-        public string FullName 
+        public string FullName
         {
             get => LastName + ", " + FirstName;
         }

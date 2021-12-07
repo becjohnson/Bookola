@@ -58,12 +58,21 @@
     <Compile Include="Book.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202112071414193_Creat.cs" />
+    <Compile Include="Migrations\202112071414193_Creat.Designer.cs">
+      <DependentUpon>202112071414193_Creat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202112071414193_Creat.resx">
+      <DependentUpon>202112071414193_Creat.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

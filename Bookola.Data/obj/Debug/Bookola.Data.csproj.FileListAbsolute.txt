@@ -12,3 +12,6 @@ C:\Users\beaut\Documents\Bookola\Bookola.Data\bin\Debug\Microsoft.AspNet.Identit
 C:\Users\beaut\Documents\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.CoreCompileInputs.cache
 C:\Users\beaut\Documents\Bookola\Bookola.Data\obj\Debug\Bookola.Data.dll
 C:\Users\beaut\Documents\Bookola\Bookola.Data\obj\Debug\Bookola.Data.pdb
+C:\Users\beaut\Documents\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.AssemblyReference.cache
+C:\Users\beaut\Documents\Bookola\Bookola.Data\obj\Debug\Bookola.Data.Migrations.Creat.resources
+C:\Users\beaut\Documents\Bookola\Bookola.Data\obj\Debug\Bookola.Data.csproj.GenerateResource.cache
