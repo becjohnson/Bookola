@@ -12,8 +12,10 @@ namespace Bookola.Data
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-        public string AuthorId { get; set; }
+        public string FullName { get; set; }
+        [ForeignKey("FullName")]
+        public Author Author { get; set; }
+
 
         [Required]
         public Guid UserId { get; set; }
@@ -33,5 +35,6 @@ namespace Bookola.Data
 
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
+
     }
 }

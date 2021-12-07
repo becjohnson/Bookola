@@ -26,6 +26,7 @@ namespace Bookola.Data
         [Key]
         public string LastName { get; set; }
         public virtual ICollection<Book> Books { get; set; }
+        public virtual ICollection<Magazine> Magazines { get; set; }
         public virtual ICollection<GraphicNovel> GraphicNovels { get; set; }
     }
 }

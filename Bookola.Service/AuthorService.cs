@@ -1,4 +1,4 @@
-﻿using Bookola.Data;
+using Bookola.Data;
 using Bookola.Models;
 using Bookola.Models.Author;
 using Bookola.WebAPI.Models;
@@ -24,6 +24,7 @@ namespace Bookola.Services
                 {
                     UserId = _userId,
                     FirstName = model.FirstName,
+                    LastName = model.LastName,
                     LastName = model.FirstName,
                 };
             using (var ctx = new ApplicationDbContext())
@@ -52,6 +53,8 @@ namespace Bookola.Services
                 return query.ToArray();
             }
         }
+
+        public AuthorDetails GetAuthorbyId(int id)
         public AuthorDetail GetAuthorbyId(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -61,7 +64,10 @@ namespace Bookola.Services
                         .Authors
                         .Single(e => e.Id == id && e.UserId == _userId);
                 return
+
+                    new AuthorDetails
                     new AuthorDetail
+
                     {
                         Id = entity.Id,
                         FullName = entity.FullName,
@@ -70,7 +76,10 @@ namespace Bookola.Services
                     };
             }
         }
+
+        public AuthorDetails GetAuthorbyLastName(string lastName)
         public AuthorDetail GetAuthorbyLastName(string lastName)
+
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -79,6 +88,8 @@ namespace Bookola.Services
                         .Authors
                         .Single(e => e.LastName.Contains(lastName) && e.UserId == _userId);
                 return
+
+                    new AuthorDetails
                     new AuthorDetail
                     {
                         Id = entity.Id,
@@ -117,3 +128,4 @@ namespace Bookola.Services
         }
     }
 }
+

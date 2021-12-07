@@ -1,14 +1,13 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace Bookola.Models.Author
 {
-    public class AuthorEdit
+    public class AuthorDetails
     {
         public int Id { get; set; }
         [Display(Name = "Author")]

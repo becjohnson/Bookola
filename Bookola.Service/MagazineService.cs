@@ -24,7 +24,7 @@ namespace Bookola.Service
             {
                 UserId = _userId,
                 Title = model.Title,
-                AuthorId = model.AuthorId,
+                FullName = model.FullName,
                 Volume = model.Volume,
                 IssueDate = model.IssueDate,
                 Genre = model.Genre
@@ -48,7 +48,7 @@ namespace Bookola.Service
                         new MagazineListItem
                         {
                             Id = e.Id,
-                            AuthorId = e.AuthorId,
+                            FullName = e.FullName,
                             Title = e.Title
                         });
                 return query.ToArray();
@@ -68,7 +68,7 @@ namespace Bookola.Service
                         new MagazineListItem
                         {
                             Id = e.Id,
-                            AuthorId = e.AuthorId,
+                            FullName = e.FullName,
                             Title = e.Title
                         });
                 return query.ToArray();
@@ -84,7 +84,7 @@ namespace Bookola.Service
                         .Magazines
                         .Single(e => e.Id == model.Id && e.UserId == _userId);
                 entity.Title = model.Title;
-                entity.AuthorId = model.AuthorId;
+                entity.FullName = model.FullName;
                 return ctx.SaveChanges() == 1;
             }
         }
