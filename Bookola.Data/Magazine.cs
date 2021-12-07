@@ -29,7 +29,8 @@ namespace Bookola.Data
         [Required]
         public DateTime IssueDate { get; set; }
         public int ISSN { get; set; }
-        
+        public int GenreId { get; set; }
+
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
     }

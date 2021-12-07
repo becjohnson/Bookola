@@ -12,7 +12,7 @@ namespace Bookola.Data
         public Guid UserId { get; set; }
         public virtual ICollection<Book> Books { get; set; }
         public virtual ICollection<Magazine> Magazines { get; set; }
-        public virtual ICollection<GraphicNovel> GraphicNovels { get; set; }
+       
         [Required]
         public string Name { get; set; }
     }
