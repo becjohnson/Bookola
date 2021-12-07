@@ -215,15 +215,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MagazineController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202112061424413_CreateDB.cs" />
-    <Compile Include="Migrations\202112061424413_CreateDB.Designer.cs">
-      <DependentUpon>202112061424413_CreateDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -290,6 +286,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Migrations\" />
     <Folder Include="Views\Book\" />
   </ItemGroup>
   <ItemGroup>
@@ -322,9 +319,18 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202112061424413_CreateDB.resx">
-      <DependentUpon>202112061424413_CreateDB.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Bookola.Data\Bookola.Data.csproj">
+      <Project>{c222bfff-df25-4e3c-9657-a7d5b701f83a}</Project>
+      <Name>Bookola.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bookola.Models\Bookola.Models.csproj">
+      <Project>{b38431e5-6fba-4a71-859c-e86581ebc512}</Project>
+      <Name>Bookola.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bookola.Service\Bookola.Service.csproj">
+      <Project>{5c2b1dc0-97c2-4fb3-b741-cd47ca765906}</Project>
+      <Name>Bookola.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
