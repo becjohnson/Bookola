@@ -15,6 +15,8 @@ namespace Bookola.Data
         [Required]
         public string Title { get; set; }
         [Required]
+        public Guid UserId { get; set; }
+        [Required]
         public string Author { get; set; }
         [Required]
         public long Isbn { get; set; }
