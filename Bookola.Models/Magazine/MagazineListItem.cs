@@ -19,7 +19,6 @@ namespace Bookola.Models.Magazine
         [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
-        [ForeignKey("GenreId")]
-        public int GenreId { get; set; }
+       
     }
 }

@@ -26,7 +26,6 @@ namespace Bookola.Service
                 Title = model.Title,
                 Volume = model.Volume,
                 IssueDate = model.IssueDate,
-                GenreId = model.GenreId
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -71,7 +70,6 @@ namespace Bookola.Service
                             Title = e.Title,
                             Volume = e.Volume,
                             IssueDate = e.IssueDate,
-                            GenreId = e.GenreId,
                         });
                 return query.ToArray();
             }
@@ -88,7 +86,6 @@ namespace Bookola.Service
                 entity.Title = model.Title;
                 entity.Volume = model.Volume;
                 entity.IssueDate = model.IssueDate;
-                entity.GenreId = model.GenreId;
                 return ctx.SaveChanges() == 1;
             }
         }

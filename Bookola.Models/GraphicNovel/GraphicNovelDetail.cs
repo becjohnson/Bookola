@@ -19,8 +19,7 @@ namespace Bookola.Models.GraphicNovel
         public string FullName { get; set; }
         [Required]
         public int ReadingLevel { get; set; }
-        [Required]
-        public int GenreId { get; set; }
+       
       
     }
 }

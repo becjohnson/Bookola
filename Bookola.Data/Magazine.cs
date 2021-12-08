@@ -1,13 +1,17 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Bookola.Data
 {
+    public enum MagazineGenre { Womens, Music, Mens, Sports, Film, TvListing, Gossip, Beauty, News, Motor, Games, Hobbies, Computing, Consumer, Cultural, CurrentAffairs, Animals, GayInterest, Health, Technology }
+
     public class Magazine
     {
         [Key]
@@ -22,10 +26,15 @@ namespace Bookola.Data
         [Required]
         [DisplayFormat(DataFormatString ="{yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
-        public int GenreId { get; set; }
 
-        [ForeignKey("GenreId")]
-        public Genre Genre { get; set; }
+        [System.Text.Json.Serialization.JsonConverter(typeof(JsonStringEnumConverter))]
+        public MagazineGenre Genre { get; set; }
+        public string FullName { get; set; }
+        [ForeignKey("FullName")]
+        public Author Author { get; set; }
+
+
+
 
     }
 }
