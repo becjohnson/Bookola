@@ -11,6 +11,25 @@ namespace Bookola.Models.Magazine
 {
     public class MagazineCreate
     {
+<<<<<<< HEAD
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string FullName { get; set; }
+        [Required]
+        public string Title { get; set; }
+
+        [Required]
+        public int Volume { get; set; }
+
+        [Required]
+        public DateTime IssueDate { get; set; }
+
+        [ForeignKey("GenreId")]
+        public Genre Genre { get; set; }
+
+
+=======
         public int Id { get; set; }
         [Required]
         public string LastName { get; set; }
@@ -22,5 +41,6 @@ namespace Bookola.Models.Magazine
         public DateTime IssueDate { get; set; }
         [ForeignKey("GenreName"), Display(Name = "Genre")]
         public string GenreName { get; set; }
+>>>>>>> a5aabd4 (Added Author Controller)
     }
 }

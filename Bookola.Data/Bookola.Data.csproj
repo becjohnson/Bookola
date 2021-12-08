@@ -60,6 +60,11 @@
     <Compile Include="GraphicNovel.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Magazine.cs" />
+<<<<<<< HEAD
+    <Compile Include="Migrations\202112061934136_Initial Migration.cs" />
+    <Compile Include="Migrations\202112061934136_Initial Migration.Designer.cs">
+      <DependentUpon>202112061934136_Initial Migration.cs</DependentUpon>
+=======
     <Compile Include="Migrations\202112080002552_CreateDB.cs" />
     <Compile Include="Migrations\202112080002552_CreateDB.Designer.cs">
       <DependentUpon>202112080002552_CreateDB.cs</DependentUpon>
@@ -71,6 +76,7 @@
     <Compile Include="Migrations\202112080139365_Genre.cs" />
     <Compile Include="Migrations\202112080139365_Genre.Designer.cs">
       <DependentUpon>202112080139365_Genre.cs</DependentUpon>
+>>>>>>> a5aabd4 (Added Author Controller)
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +86,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Migrations\202112061934136_Initial Migration.resx">
+      <DependentUpon>202112061934136_Initial Migration.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Migrations\202112080002552_CreateDB.resx">
       <DependentUpon>202112080002552_CreateDB.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +98,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112080139365_Genre.resx">
       <DependentUpon>202112080139365_Genre.cs</DependentUpon>
+>>>>>>> a5aabd4 (Added Author Controller)
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

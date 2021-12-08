@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+using System.ComponentModel.DataAnnotations;
+=======
+>>>>>>> a5aabd4 (Added Author Controller)
 
 namespace Bookola.Models.Author
 {

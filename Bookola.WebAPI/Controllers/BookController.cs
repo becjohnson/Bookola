@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Bookola.WebAPI.Controllers
+{
+    public class BookController : Controller
+    {
+        // GET: Book
+        public ActionResult Index()
+        {
+            return View();
+=======
 ﻿using Bookola.Models.Book;
 using Microsoft.AspNet.Identity;
 using Bookola.Services;
@@ -112,6 +128,7 @@ namespace Bookola.WebAPI.Controllers.BookController
                 return InternalServerError();
             }
             return Ok("Book has been deleted!");
+>>>>>>> a5aabd4 (Added Author Controller)
         }
     }
 }

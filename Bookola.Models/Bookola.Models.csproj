@@ -50,10 +50,13 @@
     <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookEdit.cs" />
     <Compile Include="Book\BookListItem.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="Genre\GenreCreate.cs" />
     <Compile Include="Genre\GenreDetail.cs" />
     <Compile Include="Genre\GenreEdit.cs" />
     <Compile Include="Genre\GenreListItem.cs" />
+>>>>>>> a5aabd4 (Added Author Controller)
     <Compile Include="GraphicNovel\GraphicNovelCreate.cs" />
     <Compile Include="GraphicNovel\GraphicNovelDetail.cs" />
     <Compile Include="GraphicNovel\GraphicNovelEdit.cs" />

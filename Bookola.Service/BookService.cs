@@ -1,16 +1,29 @@
+<<<<<<< HEAD
+﻿using System;
+=======
 ﻿using Bookola.Data;
 using Bookola.Models.Book;
 using Bookola.WebAPI.Models;
 using System;
+>>>>>>> a5aabd4 (Added Author Controller)
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
+namespace Bookola.Service
+{
+    public class BookService
+    {
+<<<<<<< Updated upstream
+=======
+=======
 namespace Bookola.Services
 {
     public class BookService
     {
+>>>>>>> a5aabd4 (Added Author Controller)
         private readonly Guid _userId;
         public BookService(Guid userId)
         {
@@ -23,11 +36,18 @@ namespace Bookola.Services
                 {
                     UserId = _userId,
                     Title = model.Title,
+<<<<<<< HEAD
+                    FullName = model.FullName,
+                    CountryCode = model.CountryCode,
+                    ReadingLevel = model.ReadingLevel,
+                    GenreName = model.GenreName,
+=======
                     LastName = model.LastName,
                     Isbn = model.Isbn,
                     CountryCode = model.CountryCode,
                     ReadingLevel = model.ReadingLevel,
                     GenreName = model.GenreName
+>>>>>>> a5aabd4 (Added Author Controller)
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -47,15 +67,58 @@ namespace Bookola.Services
                         e =>
                             new BookListItem
                             {
+<<<<<<< HEAD
+                                Title = e.Title,
+                                
+=======
                                 Id = e.Id,
                                 Title = e.Title,
                                 LastName = e.LastName,
                                 GenreName = e.GenreName
+>>>>>>> a5aabd4 (Added Author Controller)
                             }
                         );
                 return query.ToArray();
             }
         }
+<<<<<<< HEAD
+        public IEnumerable<BookListItem> GetBookByTitle(string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Books
+                    .Where(e => e.Title == title && e.UserId == _userId)
+                    .Select(
+                        e =>
+                            new BookListItem
+                            {
+                                Title = e.Title,
+
+                            }
+                        );
+                return query.ToArray();
+            }
+        }
+        public IEnumerable<BookListItem> GetBookByAuthor(string author)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Books
+                    .Where(e => e.FullName.Contains(author) && e.UserId == _userId)
+                    .Select(
+                        e =>
+                            new BookListItem
+                            {
+                                Title = e.Title,
+                                FullName = e.Title,
+                            }
+                        );
+                return query.ToArray();
+=======
         public BookDetail GetBookbyId(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -200,6 +263,7 @@ namespace Bookola.Services
                         ReadingLevel = entity.ReadingLevel,
                         GenreName = entity.GenreName
                     };
+>>>>>>> a5aabd4 (Added Author Controller)
             }
         }
         public bool UpdateBooks(BookEdit model)
@@ -209,27 +273,48 @@ namespace Bookola.Services
                 var entity =
                     ctx
                         .Books
+<<<<<<< HEAD
+                        .Single(e => e.Title == model.Title && e.UserId == _userId);
+                entity.Title = model.Title;
+                entity.FullName = model.FullName;
+                entity.CountryCode = model.CountryCode;
+=======
                         .Single(e => e.Id == model.Id && e.UserId == _userId);
                 entity.Title = model.Title;
                 entity.LastName = model.LastName;
                 entity.Isbn = model.Isbn;
                 entity.CountryCode = model.CountryCode;
                 entity.GenreName = model.GenreName;
+>>>>>>> a5aabd4 (Added Author Controller)
 
                 return ctx.SaveChanges() == 1;
             }
         }
+<<<<<<< HEAD
+        public bool DeleteBook(string title)
+=======
         public bool DeleteBook(int id)
+>>>>>>> a5aabd4 (Added Author Controller)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Books
+<<<<<<< HEAD
+                        .Single(e => e.Title == title && e.UserId == _userId);
+=======
                         .Single(e => e.Id == id && e.UserId == _userId);
+>>>>>>> a5aabd4 (Added Author Controller)
                 ctx.Books.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     }
 }
+=======
+    }
+}
+>>>>>>> a5aabd4 (Added Author Controller)

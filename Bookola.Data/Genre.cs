@@ -9,6 +9,14 @@ namespace Bookola.Data
     {
         public int GenreId { get; set; }
         [Required]
+<<<<<<< HEAD
+        public Guid UserId { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
+        public virtual ICollection<Magazine> Magazines { get; set; }
+       
+        [Required]
+        public string Name { get; set; }
+=======
         [Key]
         public string GenreName { get; set; }
         public Guid UserId { get; set; }
@@ -16,5 +24,6 @@ namespace Bookola.Data
         public virtual ICollection<Magazine> Magazines { get; set; }
         public virtual ICollection<GraphicNovel> GraphicNovels { get; set; }
         public virtual ICollection<Author> Authors { get; set; }
+>>>>>>> a5aabd4 (Added Author Controller)
     }
 }

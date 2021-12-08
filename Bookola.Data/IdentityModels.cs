@@ -31,7 +31,10 @@ namespace Bookola.WebAPI.Models
         public DbSet<Genre> Genres { get; set; }
         public DbSet<GraphicNovel>GraphicNovels {get; set; }
         public DbSet<Magazine> Magazines { get; set; }
+<<<<<<< HEAD
+=======
         public DbSet<Author> Authors { get; set; }
+>>>>>>> a5aabd4 (Added Author Controller)
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

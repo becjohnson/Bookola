@@ -25,6 +25,10 @@ namespace Bookola.Services
                     UserId = _userId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
+<<<<<<< HEAD
+                    LastName = model.FirstName,
+=======
+>>>>>>> a5aabd4 (Added Author Controller)
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -44,6 +48,10 @@ namespace Bookola.Services
                         e =>
                             new AuthorListItem
                             {
+<<<<<<< HEAD
+                                Id = e.Id,
+=======
+>>>>>>> a5aabd4 (Added Author Controller)
                                 FirstName = e.FirstName,
                                 LastName = e.LastName
                             }
@@ -51,6 +59,33 @@ namespace Bookola.Services
                 return query.ToArray();
             }
         }
+<<<<<<< HEAD
+
+        public AuthorDetails GetAuthorbyId(int id)
+        public AuthorDetail GetAuthorbyId(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Authors
+                        .Single(e => e.Id == id && e.UserId == _userId);
+                return
+
+                    new AuthorDetails
+                    new AuthorDetail
+
+                    {
+                        Id = entity.Id,
+                        FullName = entity.FullName,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                    };
+            }
+        }
+
+        public AuthorDetails GetAuthorbyLastName(string lastName)
+=======
         public IEnumerable<AuthorListItem> GetAuthorsbyName(string name)
         {
             using (var ctx = new ApplicationDbContext())
@@ -71,6 +106,7 @@ namespace Bookola.Services
                 return query.ToArray();
             }
         }
+>>>>>>> a5aabd4 (Added Author Controller)
         public AuthorDetail GetAuthorbyLastName(string lastName)
 
         {
@@ -81,8 +117,16 @@ namespace Bookola.Services
                         .Authors
                         .Single(e => e.LastName.Contains(lastName) && e.UserId == _userId);
                 return
+<<<<<<< HEAD
+
+                    new AuthorDetails
                     new AuthorDetail
                     {
+                        Id = entity.Id,
+=======
+                    new AuthorDetail
+                    {
+>>>>>>> a5aabd4 (Added Author Controller)
                         FullName = entity.FullName,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
@@ -96,7 +140,11 @@ namespace Bookola.Services
                 var entity =
                     ctx
                         .Authors
+<<<<<<< HEAD
+                        .Single(e => e.Id == model.Id && e.UserId == _userId);
+=======
                         .Single(e => e.LastName == model.LastName && e.UserId == _userId);
+>>>>>>> a5aabd4 (Added Author Controller)
                 entity.FullName = model.FullName;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
@@ -104,14 +152,22 @@ namespace Bookola.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+<<<<<<< HEAD
+        public bool DeleteAuthor(int noteId)
+=======
         public bool DeleteAuthor(int id)
+>>>>>>> a5aabd4 (Added Author Controller)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Authors
+<<<<<<< HEAD
+                        .Single(e => e.Id == noteId && e.UserId == _userId);
+=======
                         .Single(e => e.Id == id && e.UserId == _userId);
+>>>>>>> a5aabd4 (Added Author Controller)
                 ctx.Authors.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }

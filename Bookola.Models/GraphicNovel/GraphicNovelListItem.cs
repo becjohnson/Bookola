@@ -11,6 +11,20 @@ namespace Bookola.Models.GraphicNovel
 {
     public class GraphicNovelListItem
     {
+<<<<<<< HEAD
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Title { get; set; }
+        [Required]
+        public string FullName { get; set; }
+        [Required]
+        public int ReadingLevel { get; set; }
+        [Required]
+        public int GenreId { get; set; }
+        [ForeignKey("GenreId")]
+        public Genre Genre { get; set; }
+=======
         public int Id { get; set; }
         [Key]
         [Required]
@@ -22,5 +36,6 @@ namespace Bookola.Models.GraphicNovel
         [Required]
         [ForeignKey("GenreName")]
         public string GenreName { get; set; }
+>>>>>>> a5aabd4 (Added Author Controller)
     }
 }

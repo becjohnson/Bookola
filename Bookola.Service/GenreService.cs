@@ -1,12 +1,24 @@
+<<<<<<< HEAD
+﻿using System;
+=======
 ﻿using Bookola.Data;
 using Bookola.Models.Genre;
 using Bookola.WebAPI.Models;
 using System;
+>>>>>>> a5aabd4 (Added Author Controller)
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
+namespace Bookola.Service
+{
+    public class GenreService
+    {
+    }
+}
+=======
 namespace Bookola.Services.GenreService
 {
     public class GenreService
@@ -107,3 +119,4 @@ namespace Bookola.Services.GenreService
         }
     }
 }
+>>>>>>> a5aabd4 (Added Author Controller)

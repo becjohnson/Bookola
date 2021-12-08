@@ -24,10 +24,17 @@ namespace Bookola.Service
             {
                 UserId = _userId,
                 Title = model.Title,
+<<<<<<< HEAD
+                FullName = model.FullName,
+                Volume = model.Volume,
+                IssueDate = model.IssueDate,
+                Genre = model.Genre
+=======
                 LastName = model.LastName,
                 Volume = model.Volume,
                 IssueDate = model.IssueDate,
                 GenreName = model.GenreName,
+>>>>>>> a5aabd4 (Added Author Controller)
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -48,7 +55,11 @@ namespace Bookola.Service
                         new MagazineListItem
                         {
                             Id = e.Id,
+<<<<<<< HEAD
+                            FullName = e.FullName,
+=======
                             LastName = e.LastName,
+>>>>>>> a5aabd4 (Added Author Controller)
                             Title = e.Title
                         });
                 return query.ToArray();
@@ -68,7 +79,11 @@ namespace Bookola.Service
                         new MagazineListItem
                         {
                             Id = e.Id,
+<<<<<<< HEAD
+                            FullName = e.FullName,
+=======
                             LastName = e.LastName,
+>>>>>>> a5aabd4 (Added Author Controller)
                             Title = e.Title
                         });
                 return query.ToArray();
@@ -84,7 +99,11 @@ namespace Bookola.Service
                         .Magazines
                         .Single(e => e.Id == model.Id && e.UserId == _userId);
                 entity.Title = model.Title;
+<<<<<<< HEAD
+                entity.FullName = model.FullName;
+=======
                 entity.LastName = model.LastName;
+>>>>>>> a5aabd4 (Added Author Controller)
                 return ctx.SaveChanges() == 1;
             }
         }

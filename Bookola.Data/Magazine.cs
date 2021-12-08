@@ -10,6 +10,32 @@ namespace Bookola.Data
 {
     public class Magazine
     {
+<<<<<<< HEAD
+        [Key]
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        [ForeignKey("FullName")]
+        public Author Author { get; set; }
+
+
+        [Required]
+        public Guid UserId { get; set; }
+        public int Countrycode { get; set; }
+        public int ReadingLevel { get; set; }
+        
+        [Required]
+        public string Title { get; set; }
+        
+        [Required]
+        public int Volume { get; set; }
+        
+        [Required]
+        public DateTime IssueDate { get; set; }
+        public int ISSN { get; set; }
+        public int GenreId { get; set; }
+
+        [ForeignKey("GenreId")]
+=======
         public int Id { get; set; }
         [Required]
         public Guid UserId { get; set; }   
@@ -31,6 +57,7 @@ namespace Bookola.Data
         public string GenreName { get; set; }
 
         [ForeignKey("GenreName")]
+>>>>>>> a5aabd4 (Added Author Controller)
         public Genre Genre { get; set; }
 
     }

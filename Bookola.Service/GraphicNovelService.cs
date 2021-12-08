@@ -24,9 +24,15 @@ namespace Bookola.Service
             {
                 UserId = _userId,
                 Title = Model.Title,
+<<<<<<< HEAD
+                FullName = Model.FullName,
+                ReadingLevel = Model.ReadingLevel,
+                GenreId = Model.GenreId,
+=======
                 LastName = Model.LastName,
                 ReadingLevel = Model.ReadingLevel,
                 GenreName = Model.GenreName,
+>>>>>>> a5aabd4 (Added Author Controller)
 
             };
             using (var ctx = new ApplicationDbContext())
@@ -49,9 +55,14 @@ namespace Bookola.Service
                                 new GraphicNovelListItem
                                 {
                                     Id = e.Id,
+<<<<<<< HEAD
+                                    FullName = e.FullName,
+                                    Title = e.Title,
+=======
                                     LastName = e.LastName,
                                     Title = e.Title,
                                     GenreName = e.GenreName,
+>>>>>>> a5aabd4 (Added Author Controller)
                                 }
                         );
                 return query.ToArray();
