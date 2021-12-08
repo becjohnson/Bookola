@@ -1,4 +1,5 @@
-﻿using Bookola.Models.Magazine;
+﻿using Bookola.Models;
+using Bookola.Models.Magazine;
 using Bookola.Service;
 using Microsoft.AspNet.Identity;
 using System;

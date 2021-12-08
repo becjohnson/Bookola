@@ -42,14 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Author\AuthorCreate.cs" />
+    <Compile Include="Author\AuthorDetail.cs" />
+    <Compile Include="Author\AuthorEdit.cs" />
+    <Compile Include="Author\AuthorListItem.cs" />
     <Compile Include="Book\BookCreate.cs" />
     <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookEdit.cs" />
     <Compile Include="Book\BookListItem.cs" />
+
     <Compile Include="Genre\GenreCreate.cs" />
     <Compile Include="Genre\GenreDetails.cs" />
     <Compile Include="Genre\GenreEdit.cs" />
     <Compile Include="Genre\GenreListItem.cs" />
+
+    <Compile Include="GraphicNovel\GraphicNovelCreate.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelDetail.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelEdit.cs" />
+    <Compile Include="GraphicNovel\GraphicNovelListItem.cs" />
+
     <Compile Include="Magazine\MagazineCreate.cs" />
     <Compile Include="Magazine\MagazineDetail.cs" />
     <Compile Include="Magazine\MagazineEdit.cs" />

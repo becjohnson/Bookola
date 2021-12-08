@@ -1,4 +1,5 @@
-﻿using Bookola.Data;
+using Bookola.Data;
+using Bookola.Models;
 using Bookola.Models.Author;
 using Bookola.WebAPI.Models;
 using System;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bookola.Service
+namespace Bookola.Services
 {
     public class AuthorService
     {
@@ -23,7 +24,8 @@ namespace Bookola.Service
                 {
                     UserId = _userId,
                     FirstName = model.FirstName,
-                    LastName = model.LastName,
+                    LastName = model.LastName
+                    
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -51,7 +53,8 @@ namespace Bookola.Service
                 return query.ToArray();
             }
         }
-        public AuthorDetails GetAuthorbyId(int id)
+
+        public AuthorDetail GetAuthorbyId(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -60,7 +63,9 @@ namespace Bookola.Service
                         .Authors
                         .Single(e => e.Id == id && e.UserId == _userId);
                 return
-                    new AuthorDetails
+
+                    new AuthorDetail
+
                     {
                         Id = entity.Id,
                         FullName = entity.FullName,
@@ -69,7 +74,9 @@ namespace Bookola.Service
                     };
             }
         }
-        public AuthorDetails GetAuthorbyLastName(string lastName)
+
+        public AuthorDetail GetAuthorbyLastName(string lastName)
+
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -78,7 +85,8 @@ namespace Bookola.Service
                         .Authors
                         .Single(e => e.LastName.Contains(lastName) && e.UserId == _userId);
                 return
-                    new AuthorDetails
+
+                    new AuthorDetail
                     {
                         Id = entity.Id,
                         FullName = entity.FullName,
@@ -95,7 +103,7 @@ namespace Bookola.Service
                     ctx
                         .Authors
                         .Single(e => e.Id == model.Id && e.UserId == _userId);
-                entity.FullName = model.FullName;
+                
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
 
@@ -116,3 +124,4 @@ namespace Bookola.Service
         }
     }
 }
+
