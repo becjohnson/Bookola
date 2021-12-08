@@ -7,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bookola.Models.Magazine
+namespace Bookola.Models.GraphicNovel
 {
-    public class MagazineListItem
+    public class GraphicNovelListItem
     {
         [Key]
         public int Id { get; set; }
+        [Required]
         public string Title { get; set; }
         [Required]
-        public int Volume { get; set; }
+        public string FullName { get; set; }
         [Required]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
-        public DateTime IssueDate { get; set; }
-        [ForeignKey("GenreId")]
+        public int ReadingLevel { get; set; }
+        [Required]
         public int GenreId { get; set; }
+        
     }
 }

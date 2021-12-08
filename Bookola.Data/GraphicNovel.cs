@@ -8,24 +8,32 @@ using System.Threading.Tasks;
 
 namespace Bookola.Data
 {
-    public class Magazine
+    public class GraphicNovel
     {
         [Key]
         public int Id { get; set; }
-        
-        [Required]
-        public Guid UserId { get; set; }
+        public string FullName { get; set; }
+        [ForeignKey("FullName")]
+        public Author Author { get; set; }
+
+
+
         [Required]
         public string Title { get; set; }
         [Required]
-        public int Volume { get; set; }
-        [Required]
-        [DisplayFormat(DataFormatString ="{yyyy-MM-dd}")]
-        public DateTime IssueDate { get; set; }
-        public int GenreId { get; set; }
+        public Guid UserId { get; set; }
 
+        [Required]
+        public long Isbn { get; set; }
+        [Required]
+        public int CountryCode { get; set; }
+        [Required]
+        public DateTime IssuedDate { get; set; }
+        [Required]
+        public int ReadingLevel { get; set; }
+        [Required]
+        public int GenreId { get; set; }
         [ForeignKey("GenreId")]
         public Genre Genre { get; set; }
-
     }
 }

@@ -14,8 +14,7 @@ namespace Bookola.Models.Magazine
         [Key]
         public int Id { get; set; }
         [Required]
-        public string AuthorId { get; set; }
-
+        public string FullName { get; set; }
         [Required]
         public string Title { get; set; }
 
@@ -23,10 +22,11 @@ namespace Bookola.Models.Magazine
         public int Volume { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
 
-        [ForeignKey("GenreId")]
-        public Genre Genre { get; set; }
+       
+        public int GenreId { get; set; }
 
 
     }
