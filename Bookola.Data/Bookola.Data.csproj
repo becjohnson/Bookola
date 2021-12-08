@@ -92,13 +92,13 @@
     <Compile Include="GraphicNovel.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Magazine.cs" />
-    <Compile Include="Migrations\202112061934136_Initial Migration.cs" />
-    <Compile Include="Migrations\202112061934136_Initial Migration.Designer.cs">
-      <DependentUpon>202112061934136_Initial Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202112081909049_rebuild.cs" />
+    <Compile Include="Migrations\202112081909049_rebuild.Designer.cs">
+      <DependentUpon>202112081909049_rebuild.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202112081820216_second migration.cs" />
-    <Compile Include="Migrations\202112081820216_second migration.Designer.cs">
-      <DependentUpon>202112081820216_second migration.cs</DependentUpon>
+    <Compile Include="Migrations\202112081913356_no more genreId.cs" />
+    <Compile Include="Migrations\202112081913356_no more genreId.Designer.cs">
+      <DependentUpon>202112081913356_no more genreId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,11 +108,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202112061934136_Initial Migration.resx">
-      <DependentUpon>202112061934136_Initial Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112081909049_rebuild.resx">
+      <DependentUpon>202112081909049_rebuild.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112081820216_second migration.resx">
-      <DependentUpon>202112081820216_second migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112081913356_no more genreId.resx">
+      <DependentUpon>202112081913356_no more genreId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

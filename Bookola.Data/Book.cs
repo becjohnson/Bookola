@@ -27,7 +27,7 @@ namespace Bookola.Data
         [Required]
         public int ReadingLevel { get; set; }
         [Required]
-        public int GenreId { get; set; }
+        
         [System.Text.Json.Serialization.JsonConverter(typeof(JsonStringEnumConverter))]
         public BookGenre Genre { get; set; }
     }

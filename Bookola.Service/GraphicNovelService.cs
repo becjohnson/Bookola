@@ -25,8 +25,7 @@ namespace Bookola.Service
                 UserId = _userId,
                 Title = Model.Title,
                 FullName = Model.FullName,
-                ReadingLevel = Model.ReadingLevel,
-                GenreId = Model.GenreId,
+                
 
             };
             using (var ctx = new ApplicationDbContext())

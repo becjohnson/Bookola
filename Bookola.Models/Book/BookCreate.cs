@@ -14,6 +14,6 @@ namespace Bookola.Models.Book
         public long Isbn { get; set; }
         public int CountryCode { get; set; }
         public int ReadingLevel { get; set; }
-        public int GenreId { get; set; }
+      
     }
 }

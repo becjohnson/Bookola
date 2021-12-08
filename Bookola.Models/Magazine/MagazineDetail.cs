@@ -23,7 +23,7 @@ namespace Bookola.Models.Magazine
         [DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
 
-        public int GenreId { get; set; }
+       
 
     }
 }

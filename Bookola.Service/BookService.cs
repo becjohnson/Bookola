@@ -85,7 +85,6 @@ namespace Bookola.Service
                             new BookListItem
                             {
                                 Title = e.Title,
-                                GenreId =e.GenreId,
                                 Id = e.Id
                             }
                         );

@@ -26,7 +26,7 @@ namespace Bookola.Models.Magazine
         public DateTime IssueDate { get; set; }
 
        
-        public int GenreId { get; set; }
+       
 
 
     }
