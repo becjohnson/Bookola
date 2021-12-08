@@ -17,17 +17,13 @@ namespace Bookola.Models.Magazine
         [Required]
         public string Title { get; set; }
         [Required]
-        public string AuthorFirstName { get; set; }
-        [Required]
-        public string AuthorLastName { get; set; }
-        [Required]
         public int Volume { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
 
-        [ForeignKey("GenreId")]
-        public Genre Genre { get; set; }
+        public int GenreId { get; set; }
 
     }
 }

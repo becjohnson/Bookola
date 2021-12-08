@@ -12,25 +12,16 @@ namespace Bookola.Data
     {
         [Key]
         public int Id { get; set; }
-        public string FullName { get; set; }
-        [ForeignKey("FullName")]
-        public Author Author { get; set; }
-
-
+        
         [Required]
         public Guid UserId { get; set; }
-        public int Countrycode { get; set; }
-        public int ReadingLevel { get; set; }
-        
         [Required]
         public string Title { get; set; }
-        
         [Required]
         public int Volume { get; set; }
-        
         [Required]
+        [DisplayFormat(DataFormatString ="{yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
-        public int ISSN { get; set; }
         public int GenreId { get; set; }
 
         [ForeignKey("GenreId")]

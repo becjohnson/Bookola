@@ -46,6 +46,10 @@
     <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookEdit.cs" />
     <Compile Include="Book\BookListItem.cs" />
+    <Compile Include="Genre\GenreCreate.cs" />
+    <Compile Include="Genre\GenreDetails.cs" />
+    <Compile Include="Genre\GenreEdit.cs" />
+    <Compile Include="Genre\GenreListItem.cs" />
     <Compile Include="Magazine\MagazineCreate.cs" />
     <Compile Include="Magazine\MagazineDetail.cs" />
     <Compile Include="Magazine\MagazineEdit.cs" />

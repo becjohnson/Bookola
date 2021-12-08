@@ -22,10 +22,11 @@ namespace Bookola.Models.Magazine
         public int Volume { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
 
-        [ForeignKey("GenreId")]
-        public Genre Genre { get; set; }
+       
+        public int GenreId { get; set; }
 
 
     }
