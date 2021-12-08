@@ -74,7 +74,76 @@ namespace Bookola.Service
                 return query.ToArray();
             }
         }
+        public MagazineDetail GetMagazineByTitle(string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+            var entity = 
+                ctx
+                    .Magazines
+                    .Single(e => e.Title.Contains(title) && e.UserId == _userId);
+            return new MagazineDetail
+            {
+                Id = entity.Id,
+                Title = entity.Title,
+                Volume = entity.Volume,
+                IssueDate = entity.IssueDate
+            };
+            }
+        }
+        public MagazineDetail GetMagazineByVolume(int volume)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = 
+                    ctx
+                        .Magazines
+                        .Single(e => e.Volume == volume && e.UserId == _userId);
+                return new MagazineDetail
+                {
+                    Id = entity.Id,
+                    Title = entity.Title,
+                    Volume = entity.Volume,
+                    IssueDate = entity.IssueDate
+                };
+            }
+        }
+        public MagazineDetail GetMagazineByIssueDate(DateTime issue)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = 
+                    ctx
+                        .Magazines
+                        .Single(e => e.IssueDate == issue && e.UserId == _userId);
+                return new MagazineDetail
+                {
+                    Id = entity.Id,
+                    Title = entity.Title,
+                    Volume = entity.Volume,
+                    IssueDate = entity.IssueDate
+                };
+            }
+        }
+        public MagazineDetail GetMagazineByGenre(MagazineGenre genre)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = 
+                    ctx
+                        .Magazines
+                        .Single(e => e.Genre == genre && e.UserId == _userId);
+                return new MagazineDetail
+                {
+                    Id = entity.Id,
+                    Title = entity.Title,
+                    Volume = entity.Volume,
+                    IssueDate = entity.IssueDate
 
+                };
+                
+            }
+        }
         public bool UpdateMagazines(MagazineEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -100,6 +169,18 @@ namespace Bookola.Service
                 ctx.Magazines.Remove(entity);
                 return ctx.SaveChanges() == 1;
 
+            }
+        }
+        public bool DeleteMagazineByTitle(string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = 
+                    ctx
+                        .Magazines
+                        .Single(e => e.Title == title && e.UserId == _userId);
+                ctx.Magazines.Remove(entity);
+                return ctx.SaveChanges() == 1;
             }
         }
     }
