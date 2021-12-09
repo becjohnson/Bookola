@@ -49,7 +49,7 @@ namespace Bookola.WebAPI.Controllers.AuthorController
             return Ok(book);
         }
         [Route("api/Author/GetByLastName")]
-        public IHttpActionResult Get(string lastName)
+        public IHttpActionResult GetByLast(string lastName)
         {
             AuthorService bookService = CreateAuthorService();
             var book = bookService.GetAuthorbyLastName(lastName);
