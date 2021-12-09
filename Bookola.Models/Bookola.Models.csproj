@@ -50,17 +50,10 @@
     <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookEdit.cs" />
     <Compile Include="Book\BookListItem.cs" />
-
-    <Compile Include="Genre\GenreCreate.cs" />
-    <Compile Include="Genre\GenreDetails.cs" />
-    <Compile Include="Genre\GenreEdit.cs" />
-    <Compile Include="Genre\GenreListItem.cs" />
-
     <Compile Include="GraphicNovel\GraphicNovelCreate.cs" />
     <Compile Include="GraphicNovel\GraphicNovelDetail.cs" />
     <Compile Include="GraphicNovel\GraphicNovelEdit.cs" />
     <Compile Include="GraphicNovel\GraphicNovelListItem.cs" />
-
     <Compile Include="Magazine\MagazineCreate.cs" />
     <Compile Include="Magazine\MagazineDetail.cs" />
     <Compile Include="Magazine\MagazineEdit.cs" />
@@ -72,6 +65,9 @@
       <Project>{C222BFFF-DF25-4E3C-9657-A7D5B701F83A}</Project>
       <Name>Bookola.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

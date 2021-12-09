@@ -3,10 +3,22 @@ namespace Bookola.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class rebuild : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Author",
+                c => new
+                    {
+                        LastName = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false),
+                        UserId = c.Guid(nullable: false),
+                        FullName = c.String(),
+                        FirstName = c.String(),
+                    })
+                .PrimaryKey(t => t.LastName);
+            
             CreateTable(
                 "dbo.Book",
                 c => new
@@ -19,39 +31,44 @@ namespace Bookola.Data.Migrations
                         CountryCode = c.Int(nullable: false),
                         ReadingLevel = c.Int(nullable: false),
                         GenreId = c.Int(nullable: false),
+                        Genre = c.Int(nullable: false),
+                        Author_LastName = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Genre", t => t.GenreId, cascadeDelete: true)
-                .Index(t => t.GenreId);
+                .ForeignKey("dbo.Author", t => t.Author_LastName)
+                .Index(t => t.Author_LastName);
             
             CreateTable(
-                "dbo.Genre",
+                "dbo.GraphicNovel",
                 c => new
                     {
-                        GenreId = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
+                        FullName = c.String(maxLength: 128),
+                        Title = c.String(nullable: false),
                         UserId = c.Guid(nullable: false),
-                        Name = c.String(nullable: false),
+                        Isbn = c.Long(nullable: false),
+                        IssuedDate = c.DateTime(nullable: false),
+                        GraphicNovelGenre = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.GenreId);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Author", t => t.FullName)
+                .Index(t => t.FullName);
             
             CreateTable(
                 "dbo.Magazine",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        AuthorId = c.String(nullable: false),
                         UserId = c.Guid(nullable: false),
-                        Countrycode = c.Int(nullable: false),
-                        ReadingLevel = c.Int(nullable: false),
                         Title = c.String(nullable: false),
                         Volume = c.Int(nullable: false),
                         IssueDate = c.DateTime(nullable: false),
-                        ISSN = c.Int(nullable: false),
-                        GenreId = c.Int(nullable: false),
+                        Genre = c.Int(nullable: false),
+                        FullName = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Genre", t => t.GenreId, cascadeDelete: true)
-                .Index(t => t.GenreId);
+                .ForeignKey("dbo.Author", t => t.FullName)
+                .Index(t => t.FullName);
             
             CreateTable(
                 "dbo.IdentityRole",
@@ -131,22 +148,25 @@ namespace Bookola.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.Magazine", "GenreId", "dbo.Genre");
-            DropForeignKey("dbo.Book", "GenreId", "dbo.Genre");
+            DropForeignKey("dbo.Magazine", "FullName", "dbo.Author");
+            DropForeignKey("dbo.GraphicNovel", "FullName", "dbo.Author");
+            DropForeignKey("dbo.Book", "Author_LastName", "dbo.Author");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropIndex("dbo.Magazine", new[] { "GenreId" });
-            DropIndex("dbo.Book", new[] { "GenreId" });
+            DropIndex("dbo.Magazine", new[] { "FullName" });
+            DropIndex("dbo.GraphicNovel", new[] { "FullName" });
+            DropIndex("dbo.Book", new[] { "Author_LastName" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
             DropTable("dbo.Magazine");
-            DropTable("dbo.Genre");
+            DropTable("dbo.GraphicNovel");
             DropTable("dbo.Book");
+            DropTable("dbo.Author");
         }
     }
 }

@@ -7,12 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bookola.Service
+namespace Pubola.Services
 {
     public class BookService
     {
-
-
         private readonly Guid _userId;
         public BookService(Guid userId)
         {
@@ -25,8 +23,10 @@ namespace Bookola.Service
                 {
                     UserId = _userId,
                     Title = model.Title,
+                    Author = model.Author,
+                    Isbn = model.Isbn,
                     CountryCode = model.CountryCode,
-                    ReadingLevel = model.ReadingLevel
+                    ReadingLevel = model.ReadingLevel,
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -46,50 +46,131 @@ namespace Bookola.Service
                         e =>
                             new BookListItem
                             {
+                                Id = e.Id,
                                 Title = e.Title,
-                                
+                                Author = e.Author,
                             }
                         );
                 return query.ToArray();
             }
         }
-        public IEnumerable<BookListItem> GetBookByTitle(string title)
+        public BookDetail GetBookbyId(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var entity =
                     ctx
-                    .Books
-                    .Where(e => e.Title == title && e.UserId == _userId)
-                    .Select(
-                        e =>
-                            new BookListItem
-                            {
-                                Title = e.Title,
-
-                            }
-                        );
-                return query.ToArray();
+                        .Books
+                        .Single(e => e.Id == id && e.UserId == _userId);
+                return
+                    new BookDetail
+                    {
+                        Id = entity.Id,
+                        Title = entity.Title,
+                        Author = entity.Author,
+                        Isbn = entity.Isbn,
+                        CountryCode = entity.CountryCode,
+                        ReadingLevel = entity.ReadingLevel,
+                    };
             }
         }
-        public IEnumerable<BookListItem> GetBookByAuthor(string author)
+        public BookDetail GetBookbyTitle(string title)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var entity =
                     ctx
-                    .Books
-                    .Where(e => e.Author.Contains(author) && e.UserId == _userId)
-                    .Select(
-                        e =>
-                            new BookListItem
-                            {
-                                Title = e.Title,
-                                GenreId =e.GenreId,
-                                Id = e.Id
-                            }
-                        );
-                return query.ToArray();
+                        .Books
+                        .Single(e => e.Title.Contains(title) && e.UserId == _userId);
+                return
+                    new BookDetail
+                    {
+                        Id = entity.Id,
+                        Title = entity.Title,
+                        Author = entity.Author,
+                        Isbn = entity.Isbn,
+                        CountryCode = entity.CountryCode,
+                        ReadingLevel = entity.ReadingLevel,
+                    };
+            }
+        }
+        public BookDetail GetBookbyAuthor(string author)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Books
+                        .Single(e => e.Author.Contains(author) && e.UserId == _userId);
+                return
+                    new BookDetail
+                    {
+                        Id = entity.Id,
+                        Title = entity.Title,
+                        Author = entity.Author,
+                        Isbn = entity.Isbn,
+                        CountryCode = entity.CountryCode,
+                        ReadingLevel = entity.ReadingLevel,
+                    };
+            }
+        }
+        public BookDetail GetBookbyIsbn(long isbn)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Books
+                        .Single(e => e.Isbn == isbn && e.UserId == _userId);
+                return
+                    new BookDetail
+                    {
+                        Id = entity.Id,
+                        Title = entity.Title,
+                        Author = entity.Author,
+                        Isbn = entity.Isbn,
+                        CountryCode = entity.CountryCode,
+                        ReadingLevel = entity.ReadingLevel,
+                    };
+            }
+        }
+        public BookDetail GetBookbyCountryCode(int countryCode)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Books
+                        .Single(e => e.CountryCode == countryCode && e.UserId == _userId);
+                return
+                    new BookDetail
+                    {
+                        Id = entity.Id,
+                        Title = entity.Title,
+                        Author = entity.Author,
+                        Isbn = entity.Isbn,
+                        CountryCode = entity.CountryCode,
+                        ReadingLevel = entity.ReadingLevel,
+                    };
+            }
+        }
+        public BookDetail GetBookbyReadingLevel(int readingLevel)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Books
+                        .Single(e => e.ReadingLevel == readingLevel && e.UserId == _userId);
+                return
+                    new BookDetail
+                    {
+                        Id = entity.Id,
+                        Title = entity.Title,
+                        Author = entity.Author,
+                        Isbn = entity.Isbn,
+                        CountryCode = entity.CountryCode,
+                    };
             }
         }
         public bool UpdateBooks(BookEdit model)
@@ -99,26 +180,26 @@ namespace Bookola.Service
                 var entity =
                     ctx
                         .Books
-                        .Single(e => e.Title == model.Title && e.UserId == _userId);
+                        .Single(e => e.Id == model.Id && e.UserId == _userId);
                 entity.Title = model.Title;
-                
+                entity.Author = model.Author;
+                entity.Isbn = model.Isbn;
                 entity.CountryCode = model.CountryCode;
 
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteBook(string title)
+        public bool DeleteBook(int noteId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Books
-                        .Single(e => e.Title == title && e.UserId == _userId);
+                        .Single(e => e.Id == noteId && e.UserId == _userId);
                 ctx.Books.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
-
     }
 }
