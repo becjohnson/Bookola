@@ -25,7 +25,7 @@ namespace Bookola.Service
                 UserId = _userId,
                 Title = model.Title,
                 Volume = model.Volume,
-                IssueDate = model.IssueDate,
+                IssueDate = model.IssueDate
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -48,7 +48,6 @@ namespace Bookola.Service
                             Id = e.Id,
                             Title = e.Title,
                             Volume = e.Volume,
-                            IssueDate = e.IssueDate,
                         });
                 return query.ToArray();
             }
@@ -69,7 +68,6 @@ namespace Bookola.Service
                             Id = e.Id,
                             Title = e.Title,
                             Volume = e.Volume,
-                            IssueDate = e.IssueDate,
                         });
                 return query.ToArray();
             }
@@ -87,7 +85,6 @@ namespace Bookola.Service
                 Id = entity.Id,
                 Title = entity.Title,
                 Volume = entity.Volume,
-                IssueDate = entity.IssueDate
             };
             }
         }
@@ -104,7 +101,6 @@ namespace Bookola.Service
                     Id = entity.Id,
                     Title = entity.Title,
                     Volume = entity.Volume,
-                    IssueDate = entity.IssueDate
                 };
             }
         }
@@ -121,7 +117,6 @@ namespace Bookola.Service
                     Id = entity.Id,
                     Title = entity.Title,
                     Volume = entity.Volume,
-                    IssueDate = entity.IssueDate
                 };
             }
         }
@@ -138,7 +133,6 @@ namespace Bookola.Service
                     Id = entity.Id,
                     Title = entity.Title,
                     Volume = entity.Volume,
-                    IssueDate = entity.IssueDate
 
                 };
                 
@@ -154,7 +148,7 @@ namespace Bookola.Service
                         .Single(e => e.Id == model.Id && e.UserId == _userId);
                 entity.Title = model.Title;
                 entity.Volume = model.Volume;
-                entity.IssueDate = model.IssueDate;
+
                 return ctx.SaveChanges() == 1;
             }
         }

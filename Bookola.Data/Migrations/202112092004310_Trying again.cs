@@ -3,7 +3,7 @@ namespace Bookola.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class rebuild : DbMigration
+    public partial class Tryingagain : DbMigration
     {
         public override void Up()
         {
@@ -30,7 +30,6 @@ namespace Bookola.Data.Migrations
                         Isbn = c.Long(nullable: false),
                         CountryCode = c.Int(nullable: false),
                         ReadingLevel = c.Int(nullable: false),
-                        GenreId = c.Int(nullable: false),
                         Genre = c.Int(nullable: false),
                         Author_LastName = c.String(maxLength: 128),
                     })
