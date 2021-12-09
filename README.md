@@ -2,11 +2,11 @@
 
 ## Motivation ##
 ---
-
+We, at Bookola, aim to create a secure and easy-to-access book API with affordable pricing so that everyone can have access to a powerful API that provides the most powerful and relevant search experience for our users and allows readers to easily access a list of books.
 
 ## Build Status ##  
 ---
-
+MVP
 
 ## Code Style ##  
 ---
