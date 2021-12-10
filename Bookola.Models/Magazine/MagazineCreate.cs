@@ -14,19 +14,13 @@ namespace Bookola.Models.Magazine
         [Key]
         public int Id { get; set; }
         [Required]
-        public string FullName { get; set; }
-        [Required]
         public string Title { get; set; }
 
         [Required]
         public int Volume { get; set; }
-
-        [Required]
         [DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
         public DateTime IssueDate { get; set; }
-
-       
-       
+        public MagazineGenre Genre { get; set; }
 
 
     }
