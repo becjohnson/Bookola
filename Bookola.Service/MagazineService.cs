@@ -88,54 +88,66 @@ namespace Bookola.Service
             };
             }
         }
-        public MagazineDetail GetMagazineByVolume(int volume)
+        public object GetMagazineByVolume(int volume)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = 
-                    ctx
-                        .Magazines
-                        .Single(e => e.Volume == volume && e.UserId == _userId);
-                return new MagazineDetail
-                {
-                    Id = entity.Id,
-                    Title = entity.Title,
-                    Volume = entity.Volume,
-                };
+                var query =
+                     ctx
+                     .Magazines
+                     .Where(e => e.Volume == volume && e.UserId == _userId)
+                     .Select(
+                         e =>
+                         new MagazineListItem
+                         {
+                             Id = e.Id,
+                             Title = e.Title,
+                             Volume = e.Volume,
+                         });
+                return query.ToArray();
             }
         }
-        public MagazineDetail GetMagazineByIssueDate(DateTime issue)
+        public object GetMagazineByIssueDate(DateTime issueDate)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = 
-                    ctx
-                        .Magazines
-                        .Single(e => e.IssueDate == issue && e.UserId == _userId);
-                return new MagazineDetail
-                {
-                    Id = entity.Id,
-                    Title = entity.Title,
-                    Volume = entity.Volume,
-                };
+                var query =
+                     ctx
+                     .Magazines
+                     .Where(e => e.IssueDate == issueDate && e.UserId == _userId)
+                     .Select(
+                         e =>
+                         new MagazineListItem
+                         {
+                             Id = e.Id,
+                             Title = e.Title,
+                             Volume = e.Volume,
+                             IssueDate = e.IssueDate,
+                         });
+                return query.ToArray();
             }
         }
-        public MagazineDetail GetMagazineByGenre(MagazineGenre genre)
+        
+        public object GetMagazineByGenre(MagazineGenre genre)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = 
-                    ctx
-                        .Magazines
-                        .Single(e => e.Genre == genre && e.UserId == _userId);
-                return new MagazineDetail
-                {
-                    Id = entity.Id,
-                    Title = entity.Title,
-                    Volume = entity.Volume,
+                var query =
+                     ctx
+                     .Magazines
+                     .Where(e => e.Genre == genre && e.UserId == _userId)
+                     .Select(
+                         e =>
+                         new MagazineListItem
+                         {
+                             Id = e.Id,
+                             Title = e.Title,
+                             Volume = e.Volume,
+                             IssueDate = e.IssueDate,
+                             Genre = e.Genre,    
+                         });
+                return query.ToArray();
 
-                };
-                
             }
         }
         public bool UpdateMagazines(MagazineEdit model)
