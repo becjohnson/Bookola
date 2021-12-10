@@ -103,7 +103,7 @@ namespace ElevenNote.WebAPI
                     // hold additional metadata for an API. Version and title are required but you can also provide
                     // additional fields by chaining methods off SingleApiVersion.
                     //
-                    c.SingleApiVersion("v1", "ElevenNote.WebAPI");
+                    c.SingleApiVersion("v1", "Bookola.WebAPI");
                     // Enable adding the Authorization header to [Authorize]d endpoints.
                     c.OperationFilter(() => new AddAuthorizationHeaderParameterOperationFilter());
                     // Show the programmatically generated /token endpoint in the UI.
@@ -211,7 +211,7 @@ namespace ElevenNote.WebAPI
                     // enum type. Swashbuckle will honor this change out-of-the-box. However, if you use a different
                     // approach to serialize enums as string, you can also force Swashbuckle to describe them as strings.
                     //
-                    //c.DescribeAllEnumsAsStrings();
+                    c.DescribeAllEnumsAsStrings();
 
                     // Similar to Schema filters, Swashbuckle also supports Operation and Document filters:
                     //
