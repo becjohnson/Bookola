@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -92,6 +92,7 @@
     <Compile Include="GraphicNovel.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Magazine.cs" />
+
     <Compile Include="Migrations\202112092004310_Trying again.cs" />
     <Compile Include="Migrations\202112092004310_Trying again.Designer.cs">
       <DependentUpon>202112092004310_Trying again.cs</DependentUpon>
@@ -119,6 +120,7 @@
     <Compile Include="Migrations\202112101520128_enumsAsStings in Swagger.cs" />
     <Compile Include="Migrations\202112101520128_enumsAsStings in Swagger.Designer.cs">
       <DependentUpon>202112101520128_enumsAsStings in Swagger.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +130,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+
     <EmbeddedResource Include="Migrations\202112092004310_Trying again.resx">
       <DependentUpon>202112092004310_Trying again.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +151,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112101520128_enumsAsStings in Swagger.resx">
       <DependentUpon>202112101520128_enumsAsStings in Swagger.cs</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
