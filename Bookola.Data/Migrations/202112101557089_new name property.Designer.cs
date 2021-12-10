@@ -7,13 +7,13 @@ namespace Bookola.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class newworkedmigration : IMigrationMetadata
+    public sealed partial class newnameproperty : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(newworkedmigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(newnameproperty));
         
         string IMigrationMetadata.Id
         {
-            get { return "202112091859477_new worked migration"; }
+            get { return "202112101557089_new name property"; }
         }
         
         string IMigrationMetadata.Source

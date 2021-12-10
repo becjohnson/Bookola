@@ -14,8 +14,9 @@ namespace Bookola.Data
     {
         [Key]
         public int Id { get; set; }
-        public string FullName { get; set; }
-        [ForeignKey("FullName")]
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        [ForeignKey("LastName")]
         public Author Author { get; set; }
         [Required]
         public string Title { get; set; }

@@ -3,7 +3,7 @@ namespace Bookola.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class newworkedmigration : DbMigration
+    public partial class newnameproperty : DbMigration
     {
         public override void Up()
         {
@@ -42,17 +42,17 @@ namespace Bookola.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        FullName = c.String(maxLength: 128),
+                        FirstName = c.String(),
+                        LastName = c.String(maxLength: 128),
                         Title = c.String(nullable: false),
                         UserId = c.Guid(nullable: false),
                         Isbn = c.Long(nullable: false),
-                        Edition = c.Int(nullable: false),
-                        IssueDate = c.DateTime(nullable: false),
+                        IssuedDate = c.DateTime(nullable: false),
                         GraphicNovelGenre = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Author", t => t.FullName)
-                .Index(t => t.FullName);
+                .ForeignKey("dbo.Author", t => t.LastName)
+                .Index(t => t.LastName);
             
             CreateTable(
                 "dbo.Magazine",
@@ -149,14 +149,14 @@ namespace Bookola.Data.Migrations
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
             DropForeignKey("dbo.Magazine", "FullName", "dbo.Author");
-            DropForeignKey("dbo.GraphicNovel", "FullName", "dbo.Author");
+            DropForeignKey("dbo.GraphicNovel", "LastName", "dbo.Author");
             DropForeignKey("dbo.Book", "Author_LastName", "dbo.Author");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
             DropIndex("dbo.Magazine", new[] { "FullName" });
-            DropIndex("dbo.GraphicNovel", new[] { "FullName" });
+            DropIndex("dbo.GraphicNovel", new[] { "LastName" });
             DropIndex("dbo.Book", new[] { "Author_LastName" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
