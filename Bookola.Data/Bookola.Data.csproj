@@ -121,6 +121,7 @@
     <Compile Include="Migrations\202112101520128_enumsAsStings in Swagger.Designer.cs">
       <DependentUpon>202112101520128_enumsAsStings in Swagger.cs</DependentUpon>
 
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +131,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+
 
     <EmbeddedResource Include="Migrations\202112092004310_Trying again.resx">
       <DependentUpon>202112092004310_Trying again.cs</DependentUpon>
@@ -151,6 +153,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112101520128_enumsAsStings in Swagger.resx">
       <DependentUpon>202112101520128_enumsAsStings in Swagger.cs</DependentUpon>
+
 
     </EmbeddedResource>
   </ItemGroup>

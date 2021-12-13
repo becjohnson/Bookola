@@ -25,7 +25,8 @@ namespace Bookola.Service
                 UserId = _userId,
                 Title = model.Title,
                 Volume = model.Volume,
-                IssueDate = model.IssueDate
+                IssueDate = model.IssueDate,
+                Genre = model.Genre
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -48,6 +49,7 @@ namespace Bookola.Service
                             Id = e.Id,
                             Title = e.Title,
                             Volume = e.Volume,
+                            Genre = e.Genre
                         });
                 return query.ToArray();
             }
@@ -68,6 +70,7 @@ namespace Bookola.Service
                             Id = e.Id,
                             Title = e.Title,
                             Volume = e.Volume,
+                            Genre = e.Genre
                         });
                 return query.ToArray();
             }
@@ -85,6 +88,7 @@ namespace Bookola.Service
                 Id = entity.Id,
                 Title = entity.Title,
                 Volume = entity.Volume,
+                Genre = entity.Genre
             };
             }
         }
@@ -103,6 +107,7 @@ namespace Bookola.Service
                              Id = e.Id,
                              Title = e.Title,
                              Volume = e.Volume,
+                             Genre = e.Genre
                          });
                 return query.ToArray();
             }
@@ -123,6 +128,7 @@ namespace Bookola.Service
                              Title = e.Title,
                              Volume = e.Volume,
                              IssueDate = e.IssueDate,
+                             Genre = e.Genre
                          });
                 return query.ToArray();
             }
@@ -160,6 +166,7 @@ namespace Bookola.Service
                         .Single(e => e.Id == model.Id && e.UserId == _userId);
                 entity.Title = model.Title;
                 entity.Volume = model.Volume;
+                entity.Genre = model.Genre;
 
                 return ctx.SaveChanges() == 1;
             }
