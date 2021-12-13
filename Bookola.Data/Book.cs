@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace Bookola.Data
@@ -13,16 +15,12 @@ namespace Bookola.Data
         public Guid UserId { get; set; }
         [Required]
         public string Title { get; set; }
-        [Required]
-        public string Author { get; set; }
+        [ForeignKey("Author")]
+        public ICollection<Author> Authors { get; set; }
+        public int AuthorId { get; set; }
         [Required]
         public long Isbn { get; set; }
         [Required]
-        public int CountryCode { get; set; }
-        [Required]
-        public int ReadingLevel { get; set; }
-        [Required]
-        
         [System.Text.Json.Serialization.JsonConverter(typeof(JsonStringEnumConverter))]
         public BookGenre Genre { get; set; }
     }

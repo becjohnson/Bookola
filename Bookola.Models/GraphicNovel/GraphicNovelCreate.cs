@@ -11,18 +11,11 @@ namespace Bookola.Models.GraphicNovel
 {
     public class GraphicNovelCreate
     {
-        [Required]
-        public Guid UserId { get; set; }
-        [Key]
         public int Id { get; set; }
-        [Required]
+        public Guid UserId { get; set; }
         public string Title { get; set; }
-        [Required]
-        public string FullName { get; set; }
-        [Required]
-        public int ReadingLevel { get; set; }
-        
-        
-        
+        public long Isbn { get; set; }
+        public DateTimeOffset IssueDate { get; set; }
+        public GraphicNovelGenre Genre { get; set; }
     }
 }

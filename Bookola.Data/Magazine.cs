@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -12,21 +13,18 @@ namespace Bookola.Data
     {
         [Key]
         public int Id { get; set; }
-        
         [Required]
         public Guid UserId { get; set; }
         [Required]
         public string Title { get; set; }
+        [ForeignKey("Author")]
+        public ICollection<Author> Authors { get; set; }
         [Required]
         public int Volume { get; set; }
         [Required]
-        [DisplayFormat(DataFormatString ="{yyyy-MM-dd}")]
-        public DateTime IssueDate { get; set; }
-
+        [DisplayFormat(DataFormatString = "{YYYY-MM-DD}")]
+        public DateTimeOffset IssueDate { get; set; }
         [System.Text.Json.Serialization.JsonConverter(typeof(JsonStringEnumConverter))]
         public MagazineGenre Genre { get; set; }
-        public string FullName { get; set; }
-        [ForeignKey("FullName")]
-        public Author Author { get; set; }
     }
 }

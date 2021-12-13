@@ -1,5 +1,4 @@
 ﻿using Bookola.Models;
-using Bookola.Models.Author;
 using Bookola.Services;
 using Microsoft.AspNet.Identity;
 using System;

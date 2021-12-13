@@ -2,11 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 
 
-namespace Bookola.Models.Author
+namespace Bookola.Models
 {
     public class AuthorListItem
     {
-        public int Id { get; set; }
+        public int AuthorId { get; set; }
         [Display(Name = "First")]
         public string FirstName { get; set; }
         [Display(Name = "Last")]

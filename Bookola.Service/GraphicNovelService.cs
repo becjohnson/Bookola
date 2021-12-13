@@ -22,7 +22,6 @@ namespace Bookola.Service
             {
                 UserId = _userId,
                 Title = Model.Title,
-                FullName = Model.FullName,
                 
 
             };
@@ -46,7 +45,6 @@ namespace Bookola.Service
                                 new GraphicNovelListItem
                                 {
                                     Id = e.Id,
-                                    FullName = e.FullName,
                                     Title = e.Title,
                                 }
                         );

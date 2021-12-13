@@ -11,12 +11,11 @@ namespace Bookola.Models.Magazine
 {
     public class MagazineEdit
     {
-        [Key]
         public int Id { get; set; }
         public string Title { get; set; }
         public int Volume { get; set; }
-        [DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
-        public DateTime IssueDate { get; set; }
-        
+        public DateTimeOffset IssueDate { get; set; }
+        public MagazineGenre Genre { get; set; }
+        public ICollection<Author> Authors { get; set; }
     }
 }
