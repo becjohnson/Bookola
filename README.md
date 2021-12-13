@@ -1,4 +1,4 @@
-﻿# Bookola #
+# Bookola #
 
 ## Motivation ##
 ---
@@ -19,26 +19,13 @@ MVP
 
 ## Features ##  
 ---
- 
-
-## Installation ## 
----
-
-
-## Test ## 
----
-
-
-## How To Use
----
-
+ Restful API features.
 
 ## Contribute
 ---
-### No contributions necessary at this time.
-
-## Credits
----
+Jon Alas
+Bec Johnson
+Marji Sandoval
 
 
 ## License
