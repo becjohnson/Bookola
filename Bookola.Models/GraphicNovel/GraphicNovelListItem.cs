@@ -10,6 +10,6 @@ namespace Bookola.Models.GraphicNovel
         public string Title { get; set; }
         public DateTimeOffset IssueDate { get; set; }
         public GraphicNovelGenre Genre { get; set; }
-        public ICollection<Author> Authors { get; set; }
+        public int AuthorId { get; set; }
     }
 }

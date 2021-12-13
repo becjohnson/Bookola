@@ -1,4 +1,4 @@
-﻿using Bookola.Data;
+using Bookola.Data;
 using Bookola.Models.GraphicNovel;
 using Bookola.WebAPI.Models;
 using System;
@@ -22,8 +22,10 @@ namespace Bookola.Service
             {
                 UserId = _userId,
                 Title = Model.Title,
-                
-
+                Volume = Model.Volume,
+                IssuedDate = Model.IssuedDate,
+                AuthorId = Model.AuthorId,
+                Genre = Model.Genre
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -46,10 +48,13 @@ namespace Bookola.Service
                                 {
                                     Id = e.Id,
                                     Title = e.Title,
+                                    Volume = e.Volume,
+                                    IssuedDate = e.IssuedDate,
+                                    AuthorId = e.AuthorId,
+                                    Genre = e.Genre
                                 }
                         );
                 return query.ToArray();
-
             }
         }
 
@@ -63,10 +68,14 @@ namespace Bookola.Service
                         .Single(e => e.Id == id && e.UserId == _userId);
                 return
                     new GraphicNovelDetail
-                    {
-                        Id = entity.Id,
-                        Title = entity.Title,
-                    };
+                         {
+                                    Id = e.Id,
+                                    Title = e.Title,
+                                    Volume = e.Volume,
+                                    IssuedDate = e.IssuedDate,
+                                    AuthorId = e.AuthorId,
+                                    Genre = e.Genre
+                          };
             }
         }
 
@@ -81,6 +90,10 @@ namespace Bookola.Service
 
 
                 entity.Title = model.Title;
+                entity.Volume = Model.Volume;
+                entity.IssuedDate = Model.IssuedDate;
+                entity.AuthorId = Model.AuthorId;
+                entity.Genre = Model.Genre;
 
                 return ctx.SaveChanges() == 1;
             }

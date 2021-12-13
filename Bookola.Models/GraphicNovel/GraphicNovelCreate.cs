@@ -1,4 +1,4 @@
-﻿using Bookola.Data;
+using Bookola.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,11 +11,10 @@ namespace Bookola.Models.GraphicNovel
 {
     public class GraphicNovelCreate
     {
-        public int Id { get; set; }
-        public Guid UserId { get; set; }
         public string Title { get; set; }
         public long Isbn { get; set; }
-        public DateTimeOffset IssueDate { get; set; }
+        public int AuthorId { get; set; }
         public GraphicNovelGenre Genre { get; set; }
+        public DateTime IssuedDate { get; set; }
     }
 }
