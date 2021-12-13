@@ -23,8 +23,8 @@ MVP
 
 ## Contribute
 ---
-Jon Alas
-Bec Johnson
+Jon Alas,    
+Bec Johnson,  
 Marji Sandoval
 
 
