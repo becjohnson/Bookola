@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Bookola.Data
 {
-    public enum MagazineGenre { Womens, Music, Mens, Sports, Film, TvListing, Gossip, Beauty, News, Motor, Games, Hobbies, Computing, Consumer, Cultural, CurrentAffairs, Animals, GayInterest, Health, Technology }
+    public enum MagazineGenre { Womens, Music, Mens, Sports, Film, TvListing, Gossip, Beauty, News, Motor, Games, Hobbies, Computing, Consumer, Cultural, CurrentAffairs, Animals, GayInterest, Health, Technology, Children }
 
     public class Magazine
     {
@@ -24,8 +24,9 @@ namespace Bookola.Data
         [Required]
         public int Volume { get; set; }
         [Required]
-        [DisplayFormat(DataFormatString ="{yyyy-MM-dd}")]
-        public DateTime IssueDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+
+        public DateTimeOffset IssueDate { get; set; }
 
         [System.Text.Json.Serialization.JsonConverter(typeof(JsonStringEnumConverter))]
         public MagazineGenre Genre { get; set; }

@@ -3,7 +3,7 @@ namespace Bookola.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Tryingagain : DbMigration
+    public partial class firstmigration : DbMigration
     {
         public override void Up()
         {
