@@ -1,12 +1,9 @@
 using Bookola.Data;
 using Bookola.Models;
-using Bookola.Models.Author;
 using Bookola.WebAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bookola.Services
 {
@@ -25,7 +22,6 @@ namespace Bookola.Services
                     UserId = _userId,
                     FirstName = model.FirstName,
                     LastName = model.LastName
-                    
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -45,7 +41,7 @@ namespace Bookola.Services
                         e =>
                             new AuthorListItem
                             {
-                                Id = e.Id,
+                                AuthorId = e.AuthorId,
                                 FirstName = e.FirstName,
                                 LastName = e.LastName
                             }
@@ -61,14 +57,13 @@ namespace Bookola.Services
                 var entity =
                     ctx
                         .Authors
-                        .Single(e => e.Id == id && e.UserId == _userId);
+                        .Single(e => e.AuthorId == id && e.UserId == _userId);
                 return
 
                     new AuthorDetail
 
                     {
-                        Id = entity.Id,
-                        FullName = entity.FullName,
+                        AuthorId = entity.AuthorId,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
                     };
@@ -88,8 +83,7 @@ namespace Bookola.Services
 
                     new AuthorDetail
                     {
-                        Id = entity.Id,
-                        FullName = entity.FullName,
+                        AuthorId = entity.AuthorId,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
                     };
@@ -102,7 +96,7 @@ namespace Bookola.Services
                 var entity =
                     ctx
                         .Authors
-                        .Single(e => e.Id == model.Id && e.UserId == _userId);
+                        .Single(e => e.AuthorId == model.AuthorId && e.UserId == _userId);
                 
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
@@ -110,14 +104,14 @@ namespace Bookola.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteAuthor(int noteId)
+        public bool DeleteAuthor(int authorId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Authors
-                        .Single(e => e.Id == noteId && e.UserId == _userId);
+                        .Single(e => e.AuthorId == authorId && e.UserId == _userId);
                 ctx.Authors.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }

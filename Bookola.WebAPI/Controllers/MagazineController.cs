@@ -1,13 +1,9 @@
-﻿using Bookola.Data;
-using Bookola.Models;
 using Bookola.Models.Magazine;
+using Bookola.Data;
+using Bookola.Models;
 using Bookola.Service;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace Bookola.WebAPI.Controllers
@@ -102,7 +98,6 @@ namespace Bookola.WebAPI.Controllers
             }
             return Ok();
         }
-
     }
 }
 
