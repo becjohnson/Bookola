@@ -20,11 +20,9 @@ We, at Bookola, aim to create a secure and easy-to-access book API with affordab
 ---
 ### Restful API features ###
 
-## Contribute
+## Contribute ##
 ---
-### Jon Alas,    
-Bec Johnson,  
-Marji Sandoval ###
+### No contributions requested at this time ###
 
 ## License ##
 ---
