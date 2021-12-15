@@ -75,14 +75,14 @@ namespace Bookola.WebAPI.Controllers
             return Ok(magazine);
         }
         [Route("api/Magazine/Update")]
-        public IHttpActionResult Put(MagazineEdit note)
+        public IHttpActionResult Put(MagazineEdit magazine)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
             var service = CreateMagazineService();
-            if (!service.UpdateMagazines(note))
+            if (!service.UpdateMagazines(magazine))
             {
                 return InternalServerError();
             }

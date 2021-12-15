@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -92,36 +92,9 @@
     <Compile Include="GraphicNovel.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Magazine.cs" />
-
-    <Compile Include="Migrations\202112092004310_Trying again.cs" />
-    <Compile Include="Migrations\202112092004310_Trying again.Designer.cs">
-      <DependentUpon>202112092004310_Trying again.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112092037532_added IssueDate.cs" />
-    <Compile Include="Migrations\202112092037532_added IssueDate.Designer.cs">
-      <DependentUpon>202112092037532_added IssueDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112101424242_fixed GetMagazieByVolume.cs" />
-    <Compile Include="Migrations\202112101424242_fixed GetMagazieByVolume.Designer.cs">
-      <DependentUpon>202112101424242_fixed GetMagazieByVolume.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112101434074_fixed GetMagazinByIssueDate.cs" />
-    <Compile Include="Migrations\202112101434074_fixed GetMagazinByIssueDate.Designer.cs">
-      <DependentUpon>202112101434074_fixed GetMagazinByIssueDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112101441153_added genre.cs" />
-    <Compile Include="Migrations\202112101441153_added genre.Designer.cs">
-      <DependentUpon>202112101441153_added genre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112101449196_fixed genre.cs" />
-    <Compile Include="Migrations\202112101449196_fixed genre.Designer.cs">
-      <DependentUpon>202112101449196_fixed genre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112101520128_enumsAsStings in Swagger.cs" />
-    <Compile Include="Migrations\202112101520128_enumsAsStings in Swagger.Designer.cs">
-      <DependentUpon>202112101520128_enumsAsStings in Swagger.cs</DependentUpon>
-
-
+    <Compile Include="Migrations\202112151556032_Fist Migration.cs" />
+    <Compile Include="Migrations\202112151556032_Fist Migration.Designer.cs">
+      <DependentUpon>202112151556032_Fist Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,30 +104,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-
-
-    <EmbeddedResource Include="Migrations\202112092004310_Trying again.resx">
-      <DependentUpon>202112092004310_Trying again.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112092037532_added IssueDate.resx">
-      <DependentUpon>202112092037532_added IssueDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112101424242_fixed GetMagazieByVolume.resx">
-      <DependentUpon>202112101424242_fixed GetMagazieByVolume.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112101434074_fixed GetMagazinByIssueDate.resx">
-      <DependentUpon>202112101434074_fixed GetMagazinByIssueDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112101441153_added genre.resx">
-      <DependentUpon>202112101441153_added genre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112101449196_fixed genre.resx">
-      <DependentUpon>202112101449196_fixed genre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112101520128_enumsAsStings in Swagger.resx">
-      <DependentUpon>202112101520128_enumsAsStings in Swagger.cs</DependentUpon>
-
-
+    <EmbeddedResource Include="Migrations\202112151556032_Fist Migration.resx">
+      <DependentUpon>202112151556032_Fist Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

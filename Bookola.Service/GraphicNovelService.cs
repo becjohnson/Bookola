@@ -69,12 +69,12 @@ namespace Bookola.Service
                 return
                     new GraphicNovelDetail
                          {
-                                    Id = e.Id,
-                                    Title = e.Title,
-                                    Volume = e.Volume,
-                                    IssuedDate = e.IssuedDate,
-                                    AuthorId = e.AuthorId,
-                                    Genre = e.Genre
+                                    Id = entity.Id,
+                                    Title = entity.Title,
+                                    Volume = entity.Volume,
+                                    IssuedDate = entity.IssuedDate,
+                                    AuthorId = entity.AuthorId,
+                                    Genre = entity.Genre
                           };
             }
         }
@@ -90,10 +90,10 @@ namespace Bookola.Service
 
 
                 entity.Title = model.Title;
-                entity.Volume = Model.Volume;
-                entity.IssuedDate = Model.IssuedDate;
-                entity.AuthorId = Model.AuthorId;
-                entity.Genre = Model.Genre;
+                entity.Volume = model.Volume;
+                entity.IssuedDate = model.IssuedDate;
+                entity.AuthorId = model.AuthorId;
+                entity.Genre = model.Genre;
 
                 return ctx.SaveChanges() == 1;
             }
