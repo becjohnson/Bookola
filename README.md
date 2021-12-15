@@ -6,7 +6,7 @@ We, at Bookola, aim to create a secure and easy-to-access book API with affordab
 
 ## Build Status ##  
 ---
-###MVP###
+### MVP ###
 
 ## Code Style ##  
 ---
@@ -18,13 +18,13 @@ We, at Bookola, aim to create a secure and easy-to-access book API with affordab
 
 ## Features ##  
 ---
-###Restful API features###
+### Restful API features ###
 
 ## Contribute
 ---
-###Jon Alas,    
+### Jon Alas,    
 Bec Johnson,  
-Marji Sandoval###
+Marji Sandoval ###
 
 ## License ##
 ---
