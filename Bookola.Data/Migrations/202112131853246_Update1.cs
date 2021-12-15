@@ -3,7 +3,7 @@ namespace Bookola.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addedIssueDate : DbMigration
+    public partial class Update1 : DbMigration
     {
         public override void Up()
         {

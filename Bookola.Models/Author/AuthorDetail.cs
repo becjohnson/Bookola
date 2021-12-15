@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Bookola.Data;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace Bookola.Models.Author
+namespace Bookola.Models
 {
     public class AuthorDetail
     {
-        public int Id { get; set; }
+        public int AuthorId { get; set; }
         [Display(Name = "Author")]
         public string FullName
         {
@@ -15,5 +17,6 @@ namespace Bookola.Models.Author
         public string FirstName { get; set; }
         [Display(Name = "Last")]
         public string LastName { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }

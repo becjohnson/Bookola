@@ -1,14 +1,8 @@
-﻿using Bookola.Models.Book;
-using Microsoft.AspNet.Identity;
-using Bookola.Services;
+﻿using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using Bookola.Service;
 using Pubola.Services;
+using Bookola.Models;
 
 namespace Bookola.WebAPI.Controllers.BookController
 {
@@ -56,13 +50,13 @@ namespace Bookola.WebAPI.Controllers.BookController
             var book = bookService.GetBookbyTitle(title);
             return Ok(book);
         }
-        [Route("api/Book/GetByAuthor")]
-        public IHttpActionResult GetByAuthor(string author)
-        {
-            BookService bookService = CreateBookService();
-            var book = bookService.GetBookbyAuthor(author);
-            return Ok(book);
-        }
+        /*[Route("api/Book/GetByAuthor")]
+          public IHttpActionResult GetByAuthor(string author)
+          {
+              BookService bookService = CreateBookService();
+              var book = bookService.GetBookbyAuthor(author);
+              return Ok(book);
+          }*/
         [Route("api/Book/GetByIsbn")]
         public IHttpActionResult GetByIsbn(long isbn)
         {

@@ -11,17 +11,11 @@ namespace Bookola.Models.Magazine
 {
     public class MagazineDetail
     {
-        [Key]
         public int Id { get; set; }
-
-        [Required]
         public string Title { get; set; }
-        [Required]
         public int Volume { get; set; }
-
-        
-
-       
-
+        public DateTimeOffset IssueDate { get; set; }
+        public int AuthorId { get; set; }
+        public MagazineGenre Genre { get; set; }
     }
 }
