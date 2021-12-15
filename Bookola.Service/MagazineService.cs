@@ -47,7 +47,7 @@ namespace Bookola.Service
                             Id = e.Id,
                             Title = e.Title,
                             Volume = e.Volume,
-                            Genre = e.Genre
+                            Genre = e.Genre.ToString()
                         });
                 return query.ToArray();
             }
@@ -68,7 +68,7 @@ namespace Bookola.Service
                             Id = e.Id,
                             Title = e.Title,
                             Volume = e.Volume,
-                            Genre = e.Genre
+                            Genre = e.Genre.ToString()
                         });
                 return query.ToArray();
             }
@@ -86,7 +86,7 @@ namespace Bookola.Service
                 Id = entity.Id,
                 Title = entity.Title,
                 Volume = entity.Volume,
-                Genre = entity.Genre
+                Genre = entity.Genre.ToString()
             };
             }
         }
@@ -105,7 +105,7 @@ namespace Bookola.Service
                              Id = e.Id,
                              Title = e.Title,
                              Volume = e.Volume,
-                             Genre = e.Genre
+                             Genre = e.Genre.ToString()
                          });
                 return query.ToArray();
             }
@@ -126,7 +126,7 @@ namespace Bookola.Service
                              Title = e.Title,
                              Volume = e.Volume,
                              IssueDate = e.IssueDate,
-                             Genre = e.Genre
+                             Genre = e.Genre.ToString()
                          });
                 return query.ToArray();
             }
@@ -148,7 +148,7 @@ namespace Bookola.Service
                              Title = e.Title,
                              Volume = e.Volume,
                              IssueDate = e.IssueDate,
-                             Genre = e.Genre,    
+                             Genre = e.Genre.ToString()    
                          });
                 return query.ToArray();
 
