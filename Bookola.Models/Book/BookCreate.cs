@@ -12,5 +12,6 @@ namespace Bookola.Models
         public string Title { get; set; }
         public long Isbn { get; set; }
         public int AuthorId { get; set; }
+        public BookGenre Genre { get; set; }
     }
 }

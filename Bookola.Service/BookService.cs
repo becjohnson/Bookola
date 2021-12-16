@@ -14,17 +14,16 @@ namespace Pubola.Services
         {
             _userId = userId;
         }
-        
         public bool CreateBook(BookCreate model)
         {
-            //var author = new Author();
             var entity =
                 new Book()
                 {
                     UserId = _userId,
                     Title = model.Title,
                     Isbn = model.Isbn,
-                    AuthorId = model.AuthorId
+                    AuthorId = model.AuthorId,
+                    Genre = model.Genre
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -46,7 +45,6 @@ namespace Pubola.Services
                             {
                                 Id = e.Id,
                                 Title = e.Title,
-                                Authors = e.Authors,
                                 AuthorId = e.AuthorId
                             }
                         );
@@ -66,8 +64,9 @@ namespace Pubola.Services
                     {
                         Id = entity.Id,
                         Title = entity.Title,
-                        Authors = entity.Authors,
                         Isbn = entity.Isbn,
+                        AuthorId = entity.AuthorId,
+                        Genre = entity.Genre
                     };
             }
         }
@@ -84,19 +83,20 @@ namespace Pubola.Services
                     {
                         Id = entity.Id,
                         Title = entity.Title,
-                        Authors = entity.Authors,
+                        AuthorId = entity.AuthorId,
                         Isbn = entity.Isbn,
+                        Genre = entity.Genre
                     };
             }
         }
-       /* public BookDetail GetBookbyAuthor(string author)
+        public BookDetail GetBookbyAuthor(int authorId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Books
-                        .Single(e => e.Author.Contains(author) && e.UserId == _userId);
+                        .Single(e => e.AuthorId == authorId && e.UserId == _userId);
                 return
                     new BookDetail
                     {
@@ -104,11 +104,10 @@ namespace Pubola.Services
                         Title = entity.Title,
                         AuthorId = entity.AuthorId,
                         Isbn = entity.Isbn,
-                        CountryCode = entity.CountryCode,
-                        ReadingLevel = entity.ReadingLevel,
+                        Genre = entity.Genre
                     };
             }
-        }*/
+        }
         public BookDetail GetBookbyIsbn(long isbn)
         {
             using (var ctx = new ApplicationDbContext())
@@ -122,8 +121,9 @@ namespace Pubola.Services
                     {
                         Id = entity.Id,
                         Title = entity.Title,
-                        Authors = entity.Authors,
                         Isbn = entity.Isbn,
+                        AuthorId = entity.AuthorId,
+                        Genre = entity.Genre
                     };
             }
         }
@@ -136,8 +136,9 @@ namespace Pubola.Services
                         .Books
                         .Single(e => e.Id == model.Id && e.UserId == _userId);
                 entity.Title = model.Title;
-                entity.Authors = model.Authors;
                 entity.Isbn = model.Isbn;
+                entity.AuthorId = model.AuthorId;
+                entity.Genre = model.Genre;
 
                 return ctx.SaveChanges() == 1;
             }
