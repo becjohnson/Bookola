@@ -64,6 +64,13 @@ namespace Bookola.WebAPI.Controllers.BookController
             var book = bookService.GetBookbyIsbn(isbn);
             return Ok(book);
         }
+        [Route("api/Book/GetByAuthorId")]
+        public IHttpActionResult GetByAuthorId(int id)
+        {
+            BookService bookService = CreateBookService();
+            var book = bookService.GetBookbyAuthor(id);
+            return Ok(book);
+        }
         [Route("api/Book/Update")]
         public IHttpActionResult Put(BookEdit book)
         {
