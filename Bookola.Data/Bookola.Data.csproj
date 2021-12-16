@@ -92,9 +92,9 @@
     <Compile Include="GraphicNovel.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Magazine.cs" />
-    <Compile Include="Migrations\202112151556032_Fist Migration.cs" />
-    <Compile Include="Migrations\202112151556032_Fist Migration.Designer.cs">
-      <DependentUpon>202112151556032_Fist Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202112161348381_Update.cs" />
+    <Compile Include="Migrations\202112161348381_Update.Designer.cs">
+      <DependentUpon>202112161348381_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,8 +104,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202112151556032_Fist Migration.resx">
-      <DependentUpon>202112151556032_Fist Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112161348381_Update.resx">
+      <DependentUpon>202112161348381_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,10 +6,10 @@ using Swashbuckle.Swagger;
 using System.Collections.Generic;
 using System.Web.Http.Description;
 using System.Web.Http.Filters;
-using ElevenNote.WebAPI;
+using Bookola.WebAPI;
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace ElevenNote.WebAPI
+namespace Bookola.WebAPI
 {
     /// <summary>
     /// Document filter for adding Authorization header in Swashbuckle / Swagger.

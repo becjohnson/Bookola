@@ -70,23 +70,24 @@ namespace Pubola.Services
                     };
             }
         }
-        public BookDetail GetBookbyTitle(string title)
+        public IEnumerable<BookListItem> GetBooksByTitle(string title)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity =
+                var query =
                     ctx
-                        .Books
-                        .Single(e => e.Title.Contains(title) && e.UserId == _userId);
-                return
-                    new BookDetail
-                    {
-                        Id = entity.Id,
-                        Title = entity.Title,
-                        AuthorId = entity.AuthorId,
-                        Isbn = entity.Isbn,
-                        Genre = entity.Genre
-                    };
+                    .Books
+                    .Where(e => e.Title == title && e.UserId == _userId)
+                    .Select(
+                        e =>
+                            new BookListItem
+                            {
+                                Id = e.Id,
+                                Title = e.Title,
+                                AuthorId = e.AuthorId
+                            }
+                        );
+                return query.ToArray();
             }
         }
         public BookDetail GetBookbyAuthor(int authorId)
